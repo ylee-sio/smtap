@@ -1,6 +1,6 @@
-unmodified_sp1.data = Read10X(data.dir = "/Users/yl/sp_transportomics/data_sources/primary/scrna/GSE149221_RAW/sp1")
-unmodified_sp1 = CreateSeuratObject(counts = unmodified_sp1.data)
-unmodified_sp1_clustered = subcluster_suite(seurat_object = unmodified_sp1.data, res = 0.4, ndims = 1:5, strat = "tsne", jackstraw = F, coord_strat = "pca")
+#unmodified_sp1.data = Read10X(data.dir = "/Users/yl/sp_transportomics/data_sources/primary/scrna/GSE149221_RAW/sp1")
+#unmodified_sp1 = CreateSeuratObject(counts = unmodified_sp1.data)
+#unmodified_sp1_clustered = subcluster_suite(seurat_object = unmodified_sp1.data, res = 0.4, ndims = 1:5, strat = "tsne", jackstraw = F, coord_strat = "pca")
 unmodified_gene_names = tibble(
   GeneID = unmodified_sp1_clustered %>% rownames(),
   Name = unmodified_sp1_clustered %>% rownames()
